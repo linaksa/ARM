@@ -15,12 +15,7 @@
       "value": "azureuser"
     },
     "adminPassword": {
-      "reference": {
-        "keyVault": {
-          "id": "/subscriptions/REMPLACER_ABONNEMENT/resourceGroups/REMPLACER_RG_COFFRE/providers/Microsoft.KeyVault/vaults/REMPLACER_NOM_COFFRE"
-        },
-        "secretName": "vm-admin-password"
-      }
+      "value": "V7#mQ2!rL9@tK4$p" 
     },
     "dnsLabel": {
       "value": "vm-b2i-web-test-unique"
