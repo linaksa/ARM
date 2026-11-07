@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "canadaeast"
+    },
+    "vmName": {
+      "value": "vm-b2i-web"
+    },
+    "vmSize": {
+      "value": "Standard_E2s_v6"
+    },
+    "adminUsername": {
+      "value": "azureuser"
+    },
+    "adminPassword": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/REMPLACER_ABONNEMENT/resourceGroups/REMPLACER_RG_COFFRE/providers/Microsoft.KeyVault/vaults/REMPLACER_NOM_COFFRE"
+        },
+        "secretName": "vm-admin-password"
+      }
+    },
+    "dnsLabel": {
+      "value": "vm-b2i-web-test-unique"
+    },
+    "websiteHtmlBase64": {
+      "value": "PCFkb2N0eXBlIGh0bWw+PGh0bWwgbGFuZz0iZnIiPjxoZWFkPjxtZXRhIGNoYXJzZXQ9InV0Zi04Ij48dGl0bGU+UHJvdG90eXBlIEIySTwvdGl0bGU+PC9oZWFkPjxib2R5PjxoMT5TaXRlIEIySSAtIGRlcGxvaWVtZW50IEF6dXJlPC9oMT48cD5MZSBzaXRlIElJUyBmb25jdGlvbm5lLjwvcD48L2JvZHk+PC9odG1sPg=="
+    }
+  }
+}
